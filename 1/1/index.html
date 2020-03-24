@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.ico" />
+    
+
+    <title>
+        
+          介绍 - 背单词 - 使用攻略
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/css/book.css">
+
+    
+<script src="/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <a href="/">
+    <img src="/favicon.ico">
+    <span>背单词 - 使用攻略</span>
+  </a>
+</div>
+    <div class="book-menu">
+  
+</div>
+
+
+<script src="/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          
+<article id="page">
+  <h1>介绍</h1>
+  <h1 id="界面"><a class="header-anchor" href="#界面"># </a>界面</h1>
+<p><img src="https://raw.githubusercontent.com/xfqwdsj/Images/master/image_202003180917_mwordmain.png" alt="主界面"></p>
+<h1 id="用户"><a class="header-anchor" href="#用户"># </a>用户</h1>
+<p>顶部会显示您的用户信息 如果您未登录 将会提示您登录</p>
+<h1 id="选择"><a class="header-anchor" href="#选择"># </a>选择</h1>
+<p>其中 <code>Unit 1</code> 显示的是当前默写的单词本 点击以显示其他</p>
+<h1 id="指示"><a class="header-anchor" href="#指示"># </a>指示</h1>
+<p>其中 <code>adj.快乐的，高兴的</code> 代表您当前默写的单词<br>
+下方左边空白部分可能会显示提示 或 默写错误信息<br>
+右方 <code>0/27</code> 指示您默写的进度<br>
+其中 <code>30</code> 指示您默写所用秒数 默写完成后将会转换为 <code>m:ss</code> 格式<br>
+其中 <code>release 1.2.3.13</code> 指示当前版本</p>
+<h1 id="操作"><a class="header-anchor" href="#操作"># </a>操作</h1>
+<p>其中 <img src="https://raw.githubusercontent.com/xfqwdsj/Images/master/image_202003180920_soundicon.png" alt="发音"> 是一个按钮 点击即可调用 <code>有道</code> 发音API为您朗读当前单词<br>
+下方是您默写的输入框 获取焦点后颜色改变 默写错误后颜色将调整为红色 重新默写正确后调整回绿色<br>
+其中 <code>提示</code> 及 <code>重默</code> 分别是两个按钮 文案及功能会随着默写状态不同而改变<br>
+下方是默写配置 可能会与图片中不同</p>
+
+</article>
+
+<div id="paginator">
+  
+</div>
+
+        </div>
+      </div>
+      <div class="column col-2 hide-lg">
+        <div class="book-post-info">
+  
+    <div class="book-post-meta">
+
+  <div class="author">
+
+    <!-- Author image -->
+    <div class="author-img">
+      
+        <figure
+          class="avatar avatar-lg"
+          data-initial="小"
+          style="background-color: #3b4351;">
+        </figure>
+      
+    </div>
+
+    <!-- Author title -->
+    <div class="author-title">
+      <div>小番茄我的世界</div>
+      <div>2020-03-24</div>
+    </div>
+  </div>
+
+  
+
+  <div class="divider"></div>
+</div>
+  
+
+  <div class="book-tocbot">
+</div>
+<div class="book-tocbot-menu">
+  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+  <a onclick="go_top()">Back to top</a>
+  <a onclick="go_bottom()">Go to bottom</a>
+</div>
+
+
+<script src="/js/book-toc.js"></script>
+
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+</body>
+</html>
+
+
+<script src="/js/book.js"></script>
