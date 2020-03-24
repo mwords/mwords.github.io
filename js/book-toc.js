@@ -36,12 +36,20 @@ function collapse_toc() {
 }
 
 function go_top() {
-    window.scrollTo(0, 0)
+    window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: 'smooth'
+    })
     setTimeout(update_maxHeight, 150) // wait animation
 }
 
 function go_bottom() {
-    window.scrollTo(0, document.body.scrollHeight)
+    window.scrollTo({
+        left: 0,
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    })
     setTimeout(update_maxHeight, 150) // wait animation
 }
 
