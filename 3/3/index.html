@@ -11,7 +11,7 @@
 
     <title>
         
-          menu - 背单词 - 使用攻略
+          单词本 - 背单词 - 使用攻略
         
     </title>
 
@@ -102,26 +102,14 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <div class="book-content">
           <div class="book-post">
-  <ul>
-<li><a href="/">主页</a></li>
-</ul>
-<h1 id="开始"><a class="header-anchor" href="#开始">#</a>开始</h1>
-<ul>
-<li><a href="/1/1/">介绍</a></li>
-</ul>
-<h2 id="使用"><a class="header-anchor" href="#使用">#</a>使用</h2>
-<ul>
-<li><a href="/2/1/">基本</a></li>
-<li><a href="/2/2/">注册与登录</a></li>
-<li><a href="/2/3/">默写选项</a></li>
-</ul>
-<h2 id="开发"><a class="header-anchor" href="#开发">#</a>开发</h2>
-<ul>
-<li><a href="/3/1/">克隆项目</a></li>
-<li><a href="/3/2/">代码布局</a></li>
-<li><a href="/3/3/">单词本</a></li>
-</ul>
-
+  <p>您可以自定义单词本文件<br>
+命名格式<br>
+<code>words_[name].xml</code><br>
+文件格式十分简单 我就不赘述了<br>
+然后您需要在 <code>mword.html</code> 中做些修改<br>
+示例：</p>
+<figure class="highlight xml"><figcaption><span>words_demo.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">wordbook</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">item</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">word</span>&gt;</span>MemorizeWords<span class="tag">&lt;/<span class="name">word</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">trans</span>&gt;</span>&lt;![CDATA[我的项目名是？]]&gt;<span class="tag">&lt;/<span class="name">trans</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">item</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">word</span>&gt;</span>xfqwdsj<span class="tag">&lt;/<span class="name">word</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">trans</span>&gt;</span>&lt;![CDATA[我的用户名是？]]&gt;<span class="tag">&lt;/<span class="name">trans</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">item</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">word</span>&gt;</span>hard-working<span class="tag">&lt;/<span class="name">word</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">trans</span>&gt;</span>&lt;![CDATA[我很？]]&gt;<span class="tag">&lt;/<span class="name">trans</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">wordbook</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>mword.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"select"</span> <span class="attr">id</span>=<span class="string">"unit"</span> <span class="attr">style</span>=<span class="string">"margin-bottom: 2px"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"demo"</span>&gt;</span>做些小测试<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </div>
 
 

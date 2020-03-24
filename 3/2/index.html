@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.ico" />
+    
+
+    <title>
+        
+          代码布局 - 背单词 - 使用攻略
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/css/book.css">
+
+    
+<script src="/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <a href="/">
+    <img src="/favicon.ico">
+    <span>背单词 - 使用攻略</span>
+  </a>
+</div>
+    <div class="book-menu">
+  <ul>
+<li><a href="/">主页</a></li>
+</ul>
+<h1 id="开始"><a class="header-anchor" href="#开始">#</a>开始</h1>
+<ul>
+<li><a href="/1/1/">介绍</a></li>
+</ul>
+<h2 id="使用"><a class="header-anchor" href="#使用">#</a>使用</h2>
+<ul>
+<li><a href="/2/1/">基本</a></li>
+<li><a href="/2/2/">注册与登录</a></li>
+<li><a href="/2/3/">默写选项</a></li>
+</ul>
+<h2 id="开发"><a class="header-anchor" href="#开发">#</a>开发</h2>
+<ul>
+<li><a href="/3/1/">克隆项目</a></li>
+<li><a href="/3/2/">代码布局</a></li>
+<li><a href="/3/3/">单词本</a></li>
+</ul>
+
+</div>
+
+
+<script src="/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          <div class="book-post">
+  <h1 id="HTML"><a class="header-anchor" href="#HTML">#</a>HTML</h1>
+<h2 id="mword-html"><a class="header-anchor" href="#mword-html">#</a>mword.html</h2>
+<ol>
+<li>引用：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"/css/normalize.css"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"/css/component.css"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/jquery.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/mword.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>初始化：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> currentUser = MW.User.current()</span></span><br><span class="line"><span class="javascript">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line">	if(currentUser) &#123;</span><br><span class="line"><span class="javascript">		$(<span class="string">"#user"</span>).html(<span class="string">"您已登录：&lt;a href='/mword/mword-user.html'&gt;"</span> + currentUser.get(<span class="string">"username"</span>) + <span class="string">"&lt;/a&gt;"</span>)</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="actionscript">	<span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="handlebars"><span class="xml">		$("#user").html("请<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">'/mword/mword-login.html'</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">a</span>&gt;</span> 或<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">''</span>&gt;</span>刷新<span class="tag">&lt;/<span class="name">a</span>&gt;</span> 否则本次默写数据无效")</span></span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>样式：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-class">.bton</span> &#123;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">padding</span><span class="selector-pseudo">:0.6rem</span> 0<span class="selector-class">.9rem</span>;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">font-size</span>: 0<span class="selector-class">.9rem</span>;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">color</span>: <span class="selector-tag">rgba</span>(0,0,0,0<span class="selector-class">.7</span>);</span></span><br><span class="line"><span class="css">		<span class="selector-tag">background-color</span>: <span class="selector-tag">rgba</span>(0,0,0,0<span class="selector-class">.08</span>);</span></span><br><span class="line"><span class="css">		<span class="selector-tag">outline</span><span class="selector-pseudo">:none</span>;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">border-color</span>: <span class="selector-tag">rgba</span>(0,0,0,0<span class="selector-class">.2</span>);</span></span><br><span class="line">		border-style: solid;</span><br><span class="line">		border-width: 1px;</span><br><span class="line"><span class="css">		<span class="selector-tag">border-radius</span>: 0<span class="selector-class">.3rem</span>;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">transition</span>: <span class="selector-tag">color</span> 0<span class="selector-class">.2s</span>, <span class="selector-tag">background-color</span> 0<span class="selector-class">.2s</span>, <span class="selector-tag">border-color</span> 0<span class="selector-class">.2s</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="comment">/* ... */</span></span></span><br><span class="line"><span class="css">	<span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">"number"</span>]</span> &#123;</span></span><br><span class="line">		-moz-appearance: textfield;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>布局主题：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align: center; padding:2rem 1rem;"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"user"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"select"</span> <span class="attr">id</span>=<span class="string">"unit"</span> <span class="attr">style</span>=<span class="string">"margin-bottom: 2px"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"7b_u1"</span>&gt;</span>Unit 1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"7b_u2"</span>&gt;</span>Unit 2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"7b_u3"</span>&gt;</span>Unit 3<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"7b_u4"</span>&gt;</span>Unit 4<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"7b_u5"</span>&gt;</span>Unit 5<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"7b_u6"</span>&gt;</span>Unit 6<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"7b_u7"</span>&gt;</span>Unit 7<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"7b_u8"</span>&gt;</span>Unit 8<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"test"</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"margin-top: 20px;"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"input input--akira"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"input__field input__field--akira"</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"input-helpdiy"</span> ο<span class="attr">nkeypress</span>=<span class="string">"return (/[\d]/.test(String.fromCharCode(event.keyCode)))"</span> /&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"input__label input__label--akira"</span> <span class="attr">for</span>=<span class="string">"input-helpdiy"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"input__label-content input__label-content--akira"</span>&gt;</span>提示字数（留空为全部提示）<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>输入框修复代码（尽量不要修改 应用到底部的默写选项）：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/classie.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="comment">/* ... */</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="mword-login-html-mword-signin-html-mword-user-html"><a class="header-anchor" href="#mword-login-html-mword-signin-html-mword-user-html">#</a>mword-login.html/mword-signin.html/mword-user.html</h2>
+<p>大部分为JS代码</p>
+<h2 id="result-html"><a class="header-anchor" href="#result-html">#</a>result.html</h2>
+<p>只说明JS部分：</p>
+<ol>
+<li>函数<br>
+一开头就定义了三个函数
+<ol>
+<li><code>getQueryString</code><br>
+用于获取地址栏参数</li>
+<li><code>getMSSTime</code><br>
+用于转换时间</li>
+<li><code>descend</code><br>
+从网上找来的 根据数组内容进行排序</li>
+</ol>
+</li>
+<li>主体
+<ol>
+<li><code>if(getQueryString(&quot;id&quot;) != null)</code><br>
+首先判断地址栏是否有 <code>id</code> 参数<br>
+接下来进行两次服务器查询请求：
+<ol>
+<li><code>query.find().then(function(object)</code></li>
+<li><code>user.find().then(function(users)</code><br>
+查找所有默写结果以及用户 主要用于展示 <code>排行榜</code><br>
+由于展示排行榜需要获取用户信息 但是如果循环获取就会超出服务器请求限制<br>
+所以我不惜多写几十行代码使用查询功能</li>
+</ol>
+</li>
+<li><code>else</code><br>
+用于展示ID输入框</li>
+</ol>
+</li>
+</ol>
+<h1 id="JS"><a class="header-anchor" href="#JS">#</a>JS</h1>
+<h2 id="重磅：js-mword-js"><a class="header-anchor" href="#重磅：js-mword-js">#</a>重磅：js/mword.js</h2>
+<p>这是主体的主体 我已经施工将变量转为中文 方便各位研究</p>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/js/book-post.js"></script>
+
+        </div>
+      </div>
+      <div class="column col-2 hide-lg">
+        <div class="book-post-info">
+  
+    <div class="book-post-meta">
+
+  <div class="author">
+
+    <!-- Author image -->
+    <div class="author-img">
+      
+        <figure
+          class="avatar avatar-lg"
+          data-initial="小"
+          style="background-color: #3b4351;">
+        </figure>
+      
+    </div>
+
+    <!-- Author title -->
+    <div class="author-title">
+      <div>小番茄我的世界</div>
+      <div>2020-03-24</div>
+    </div>
+  </div>
+
+  
+
+  <div class="divider"></div>
+</div>
+  
+
+  <div class="book-tocbot">
+</div>
+<div class="book-tocbot-menu">
+  <a class="book-toc-expand" onclick="expand_toc()">展开全部</a>
+  <a onclick="go_top()">返回顶部</a>
+  <a onclick="go_bottom()">前往底部</a>
+</div>
+
+
+<script src="/js/book-toc.js"></script>
+
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+</body>
+</html>
+
+
+<script src="/js/book.js"></script>
