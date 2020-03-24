@@ -61,11 +61,11 @@ document.addEventListener('DOMContentLoaded', function () {
   <ul>
 <li><a href="/">主页</a></li>
 </ul>
-<h1 id="开始"><a class="header-anchor" href="#开始"># </a>开始</h1>
+<h1 id="开始"><a class="header-anchor" href="#开始">#</a>开始</h1>
 <ul>
 <li><a href="/1/1/">介绍</a></li>
 </ul>
-<h2 id="使用"><a class="header-anchor" href="#使用"># </a>使用</h2>
+<h2 id="使用"><a class="header-anchor" href="#使用">#</a>使用</h2>
 <ul>
 <li><a href="/1/2/1/">基本</a></li>
 <li><a href="/1/2/2/">注册与登录</a></li>
@@ -94,24 +94,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
         </div>
         <div class="book-content">
-          
-<article id="page">
-  <h1>注册与登录</h1>
+          <div class="book-post">
   <p>在版本<code>1.2.5</code>中引入了用户系统<br>
 如果需要把数据存储到服务器<br>
 您必须登录</p>
-<h1 id="注册"><a class="header-anchor" href="#注册"># </a>注册</h1>
+<h1 id="注册"><a class="header-anchor" href="#注册">#</a>注册</h1>
 <p>如果需要注册 您必须提供用户名、昵称、邮箱、密码<br>
 放心 我们不会盗取您的密码 也不会向您的邮箱发送垃圾信息<br>
 注册后 您需要到邮箱寻找验证邮件 如果没有 请等待一会或翻翻你的垃圾桶</p>
-<h1 id="登录"><a class="header-anchor" href="#登录"># </a>登录</h1>
+<h1 id="登录"><a class="header-anchor" href="#登录">#</a>登录</h1>
 <p>输入用户名及密码即可登录 登录信息长期保存 直到您退出或身份到期</p>
 
-</article>
-
-<div id="paginator">
-  
 </div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/js/book-post.js"></script>
 
         </div>
       </div>
@@ -149,9 +156,9 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="book-tocbot">
 </div>
 <div class="book-tocbot-menu">
-  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
-  <a onclick="go_top()">Back to top</a>
-  <a onclick="go_bottom()">Go to bottom</a>
+  <a class="book-toc-expand" onclick="expand_toc()">展开全部</a>
+  <a onclick="go_top()">返回顶部</a>
+  <a onclick="go_bottom()">前往底部</a>
 </div>
 
 
