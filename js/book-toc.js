@@ -7,34 +7,6 @@ tocbot.init({
     scrollSmooth: false,
 })
 
-function expand_toc() {
-    var b = document.querySelector(".book-toc-expand")
-    tocbot.init({
-        tocSelector: '.book-tocbot',
-        contentSelector: '.book-content',
-        headingSelector: 'h1, h2, h3, h4, h5',
-        collapseDepth: 6,
-        orderedList: false,
-        scrollSmooth: false,
-    })
-    b.setAttribute("onclick", "collapse_toc()")
-    b.innerHTML = "折叠全部"
-}
-
-function collapse_toc() {
-    var b = document.querySelector(".book-toc-expand")
-    tocbot.init({
-        tocSelector: '.book-tocbot',
-        contentSelector: '.book-content',
-        headingSelector: 'h1, h2, h3, h4, h5',
-        collapseDepth: 2,
-        orderedList: false,
-        scrollSmooth: false,
-    })
-    b.setAttribute("onclick", "expand_toc()")
-    b.innerHTML = "展开全部"
-}
-
 function go_top() {
     window.scrollTo({
         left: 0,
